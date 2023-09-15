@@ -1,0 +1,48 @@
+.navBody {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.navHead {
+  width: 20%;
+  height: 10%;
+  background-color: #818181;
+  border-radius: 500000000px;
+}
+.navRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.navTail {
+  width: 20%;
+  height: 10%;
+  background-color: #818181;
+  border-radius: 500000000px;
+  justify-content: end;
+  flex-direction: row;
+  display: flex;
+  padding-right: 30px;
+}
+.navTail p {
+  color: #818181;
+  background-color: #000;
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.navTail a {
+  text-decoration: none;
+}
+.navRow p {
+  font-family: TTRoundsCondensedW10-Rg;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

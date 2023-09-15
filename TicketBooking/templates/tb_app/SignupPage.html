@@ -1,0 +1,106 @@
+{% load static%}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
+</head>
+<body>
+    <div style="backdrop-filter: blur(2px);">
+    <div class="homeicon">
+        <form id="homeicon" name="" method="Get" Action="">
+          <a href="/MainPage/"> <img src="{%static 'image/Payment/homeIcon.png' %}" width="50" height="50"></a>  
+          
+        </form>
+    </div>
+<div class="container">
+
+    <form action="" method="POST" >
+       {% csrf_token %}
+        <div class="row">
+
+            <div class="imagelog">
+                <img class="imagelog-1" src="{% static 'image/LoginPage/Login.png' %}" alt="hhh">
+                </div>
+
+                <div class=" saker">
+                            <div class="saker-left">
+                                <div class="col">
+
+                                    <h3 class="title">sign up</h3>
+
+                                        <div class="inputBox">
+                                            <span>Name</span>
+                                            <input type="text" placeholder="Name" name="name">
+                                        </div>
+                                            <div class="inputBox">
+                                                <span>Email address </span>
+                                                <input type="email" placeholder="example@example.com" name="email">
+                                                </div>
+                                            <div class="inputBox">
+                                            <span>Password</span>
+                                            <input type="password" placeholder="Password"  name="password">
+                                            </div>
+                                            <div class="inputBox">
+                                                <span>Confirm Password</span>
+                                                <input type="password" placeholder="Password"  name="password2">
+                                                </div>
+                                                <div class ="saker8">
+                                    
+                                            <div class="inputBox">
+                                                <input type="submit" value="sign up" class="submit-btn">
+                                            </div>
+                                            {% if messages %}
+                                            <h1>{{message}}</h1>
+                                        <div >
+                                            {% for message in messages %}
+                                            <br/>
+                                        {% if "login" in message.tags %}
+                                            <div class="messages1">
+                                            <p class="{{ message.tags }}">{{ message }}</p>
+                                            </div>
+                                            {% endif %}
+    
+    
+                                            {% if "Invalid data" in message.tags %}
+                                            <div class="messages2">
+                                            <p class="{{ message.tags }}">{{ message }}</p>
+                                            </div>
+                                            {% endif %}
+    
+                                            
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                        </div>
+                            </div>
+                
+                    </div>
+                    
+                    </div>
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Already have an account? <a href=" /LoginPage/ " class="ml-2">Login</a>
+                        </div>
+            </div>
+            </div>
+
+
+    </form>
+</div>
+</div>    
+    
+</body>
+
+</html>
+{% endblock content%}

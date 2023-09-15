@@ -1,0 +1,125 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>NFL Main Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/content.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/dropdown.css' %}" />
+    <link
+      href="//db.onlinewebfonts.com/c/4626c20f1677e7629dade5bef0d1ebde?family=TTRoundsCondensedW10-Rg"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <script>
+      function toggleDropdown() {
+        console.log("tapped");
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        console.log("clicked");
+          var dropdowns = document.getElementsByClassName("dropdown-content")[0];
+          if (event.target.matches("img")) {
+              // change display to none
+              dropdowns.style.display = null;
+            } else {
+            dropdowns.style.display = 'none';
+
+        }
+      }; 
+    </script>
+    <div class="main">
+      <div class="navBody">
+        <div class="navHead">
+          <div class="navRow">
+            <a href="/MainPage/">
+              <object
+                data="\static\icons\home.svg"
+                width="50"
+                height="50"
+              ></object>
+            </a>
+            <p>Sports</p>
+
+            <a onclick="toggleDropdown()" class="dropbtn"
+              ><img src="/static/image/Home/ArrowS.png" alt="arrow"
+            /></a>
+            <div class="dropdown">
+              <div id="myDropdown" class="dropdown-content">
+                <a href="/MainPage/NBAMainPage/">NBA</a>
+                <a href="/MainPage/NFLMainPage/">NFL</a>
+                <a href="/MainPage/TennisMainPage/">Tennis</a>
+                <a href="/MainPage/MLBMainPage/">MLB</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navTail">
+          <a href="/LoginPage/">
+            <p>LOGIN</p>
+          </a>
+        </div>
+      </div>
+      <div class="header">
+        <div class="headerTitle">
+          <p class = "slide-in" class="title">
+            Home / NFL Football<br /><strong>NFL Football Tickets</strong>
+          </p>
+          <p class = "slide-in">
+            Tickets to your favorite NFL Football events. All right here. Let's
+            go.
+          </p>
+        </div>
+        <img class = "fade-in" src="\static\image\Home\usfoot-1.png" alt="NFL Football Tickets" />
+      </div>
+      <div class="content">
+        <p class = "slide-left">&nbsp;&nbsp;Popular NFL Games</p>
+        <div class="contentRow">
+          <div class="contentBox">
+            <img class = "fade-in" src="\static\image\Home\mongo2 (1) 1.png" alt="ticket" />
+            <a class = "fade-in" href="NFLTicket1"><strong>Texans at Cowboys</strong></a>
+            <p>Jan 1. AT&T Stadium</p>
+          </div>
+          <div class="contentBox">
+            <img class = "fade-in" src="\static\image\Home\mongo2 (2) 1.png" alt="ticket" />
+            <a class = "fade-in" href="NFLTicket2"><strong>Giants at Commanders</strong></a>
+            <p>Jan 12. FedExField</p>
+          </div>
+          <div class="contentBox">
+            <img class = "fade-in" src="\static\image\Home\mongo2 (3) 1.png" alt="ticket" />
+            <a class = "fade-in" href="NFLTicket3"><strong>Jets at Bills</strong></a>
+            <p>Jan 20. Highmark Stadium</p>
+          </div>
+        </div>
+
+        <p class = "slide-left">Upcoming NFL Games</p>
+        <div class="contentRow">
+          <div class="contentBox">
+            <img class = "fade-in" src="\static\image\Home\mongo2 (4) 1.png" alt="ticket" />
+            <a class = "fade-in" href="NFLTicket4"><strong>Raiders at Rams</strong></a>
+            <p>Jan 30. SoFi Stadium</p>
+          </div>
+          <div class="contentBox">
+            <img class = "fade-in" src="\static\image\Home\mongo2 (5) 1.png" alt="ticket" />
+            <a class = "fade-in" href="NFLTicket5"><strong>Saints at Buccaneers</strong></a>
+            <p>Jan 23. Raymond James Stadium</p>
+          </div>
+          <div class="contentBox">
+            <img class = "fade-in" src="\static\image\Home\mongo2 (6) 1.png" alt="ticket" />
+            <a class = "fade-in" href="NFLTicket6"><strong>Eagles at Giants</strong></a>
+            <p>Jan 31. MetLife Stadium</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Main Page</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/content.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/dropdown.css' %}" />
+  <link href="//db.onlinewebfonts.com/c/4626c20f1677e7629dade5bef0d1ebde?family=TTRoundsCondensedW10-Rg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  
+</head>
+
+<body style="color: white; font-family: 'Poppins', sans-serif;">
+
+  <script>
+    function toggleDropdown() {
+      console.log("tapped");
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      console.log("clicked");
+      var dropdowns = document.getElementsByClassName("dropdown-content")[0];
+      if (event.target.matches("img")) {
+        // change display to none
+        dropdowns.style.display = null;
+      } else {
+        dropdowns.style.display = 'none';
+
+      }
+    }; 
+  </script>
+  <div style="backdrop-filter: blur(2px);">
+    <div  class="featured">
+      <div style="align-self: start;" class="navBody">
+        <div class="navHead">
+          <div class="navRow">
+            <a href="/MainPage/">
+              <object data="\static\icons\home.svg" width="50" height="50"></object>
+            </a>
+            <p>Sports</p>
+
+            <a onclick="toggleDropdown()" class="dropbtn"><img src="/static/image/Home/ArrowS.png" alt="arrow" /></a>
+            <div class="dropdown">
+              <div id="myDropdown" class="dropdown-content">
+                <a href="/MainPage/NBAMainPage/">NBA</a>
+                <a href="/MainPage/NFLMainPage/">NFL</a>
+                <a href="/MainPage/TennisMainPage/">Tennis</a>
+                <a href="/MainPage/MLBMainPage/">MLB</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navTail">
+          <a href="/LoginPage/">
+            <p >LOGIN</p>
+          </a>
+        </div>
+      </div>
+
+      <div style="margin-inline: auto;">
+        <h1 class = "slide-left" style="align-self: center; font-weight: 800; font-size: 3rem; text-align: center; ">Let there be live</h1>
+        <h3 class = "slide-left" style="align-self: center; font-weight: 700; font-size: 1.5rem; text-align: center; max-width: 30ch; margin-top: 2rem; line-height: 2;">Your next best-night-ever is waiting.
+          And we have the tickets.</h3>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+    <h2 class = "slide-left"  style="margin-left: 7rem; margin-block: 5rem; font-size: 2rem;">Browse Events</h2>
+
+    <div style="display: grid; gap: 2rem; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr; margin-inline: 10rem;">
+
+      <a class = "fade-in" href="/MainPage/NBAMainPage/" style="text-decoration: none; color:white"><div style="display: grid; grid-template-columns:1fr 1fr; background-color: black; border-radius: 3rem; gap : 1rem; padding: 1rem;  height: 90%;">
+        <h2 class = "slide-left"  style="align-self: end; justify-self: center; ">NBA</h2>
+        <img src="/static/image/Main/banner1.png" alt="" srcset="">
+      </div></a>
+
+      <a class = "fade-in" href = "/MainPage/MLBMainPage" style="text-decoration: none; color:white"><div style="display: grid; grid-template-columns:1fr 1fr; background-color: black; border-radius: 3rem; gap : 1rem; padding: 1rem;  height: 90%;">
+        <h2 class = "slide-left"  style="align-self: end; justify-self: center;">MLB</h2>
+        <img src="/static/image/Main/banner2.png" alt="" srcset="">
+      </div></a>
+
+      <a class = "fade-in" href = "/MainPage/NFLMainPage" style="text-decoration: none; color:white"><div style="display: grid; grid-template-columns:1fr 1fr; background-color: black; border-radius: 3rem; gap : 1rem; padding: 1rem; height: 90%;">
+        <h2 class = "slide-left"  style="align-self: end; justify-self: center;">NFL</h2>
+        <img src="/static/image/Main/banner4.png" alt="" srcset="">
+      </div></a>
+
+      <a class = "fade-in" href = "/MainPage/TennisMainPage" style="text-decoration: none; color:white"><div style=" display: grid; grid-template-columns:1fr 1fr; background-color: black; border-radius: 3rem; gap : 1rem; padding: 1rem;  height: 90%;">
+        <h2 class = "slide-left" style="align-self: end; justify-self: center;">Tennis</h2>
+        <img src="/static/image/Main/banner3.png" alt="" srcset="">
+      </div></a>
+
+    </div>
+  
+
+  </div>
+</body>
+
+</html>

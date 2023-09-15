@@ -1,0 +1,120 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}" />
+  </head>
+  <body>
+    <div style="backdrop-filter: blur(2px)">
+      <div class="homeicon">
+        <form id="homeicon" name="" method="Get" action="">
+          <a href="/MainPage/">
+            <img
+              src="{%static 'image/Payment/homeIcon.png' %}"
+              width="50"
+              height="50"
+          /></a>
+        </form>
+      </div>
+      <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+          <div class="user_card">
+            <div class="d-flex justify-content-center form_container">
+              <form method="POST" action="" >
+                {% csrf_token %}
+                <div>
+                  <div class="imagelog">
+                    <img
+                      class="imagelog-1"
+                      src="{% static 'image/LoginPage/Login.png' %}"
+                      alt="hhh"
+                    />
+                  </div>
+
+                  <div class="d-flex justify-content-center">
+                    <h3 id="form-title">LOGIN</h3>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-append">
+                      <div class="saker5">
+                        <span class="input-group-text"
+                          ><i class="fas fa-user"></i
+                        ></span>
+
+                        <input
+                          type="text"
+                          name="username"
+                          placeholder="Username..."
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    <div class="input-group-append">
+                      <div class="saker5">
+                        <span class="input-group-text"
+                          ><i class="fas fa-key"></i
+                        ></span>
+
+                        <input
+                          type="password"
+                          name="password"
+                          placeholder="Password..."
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="loginb">
+                    <div class="inputBox">
+                      <input type="submit" value="Login" class="submit-btn" />
+                    </div>
+                  </div>
+                  {% if messages %}
+                  <h1>{{message}}</h1>
+                  <div>
+                    {% for message in messages %}
+                    <br />
+                    {% if "login" in message.tags %}
+                    <div class="messages1">
+                      <p class="{{ message.tags }}">{{ message }}</p>
+                    </div>
+                    {% endif %} {% if "Invalid data" in message.tags %}
+                    <div class="messages2">
+                      <p class="{{ message.tags }}">{{ message }}</p>
+                    </div>
+                    {% endif %} {% endfor %}
+                  </div>
+                  {% endif %}
+
+                  <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                      Don't have an account?
+                      <a href="/SignupPage/" class="ml-2">Sign Up</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

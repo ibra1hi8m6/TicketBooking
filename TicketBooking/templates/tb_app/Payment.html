@@ -1,0 +1,91 @@
+{% load static%}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Payment.css' %}">
+
+</head>
+<body>
+  <div style="backdrop-filter: blur(2px);">
+    
+    <div class="homeicon">
+        <form id="homeicon" name="" method="Get" Action="">
+          <a href="/MainPage/"> <img src="{%static 'image/Payment/homeIcon.png' %}" width="50" height="50"></a>  
+          
+        </form>
+    </div>
+   <div class="container">
+    
+    
+    <form action="" method="post">
+        {% csrf_token %}
+
+
+        <div class="row">
+
+            <div class="col">
+
+                
+                <div class="imagelog">
+                    <img  class="imagelog-1" src="{% static 'image/Payment/Payment.png' %}" alt="hhh">
+                    </div>
+              
+                <div class="inputBox"  >
+                    <span>Email</span>
+                    <input type="text" placeholder="Write your email here" name="email">
+                </div>
+                <div   class="inputBox" >
+                    <span>Card Details</span>
+                    <div class=" card-col">
+                        <div class="card-row1">
+                            <div class="number-card">
+                                
+                                <input  type="tel" inputmode="numeric" maxlength="19"  placeholder="1234 1234 1234" name="numberCard">
+                            </div>
+                            <div class="image">
+                                <img src= "{%static 'image/Payment/Cards.png' %}" alt="photo">
+                            </div>
+                        </div>
+                        <div class="card-row2">
+                            <div class="month">
+                                <input  type="text" 
+                                id="inputExpDate" 
+                                placeholder="MM / YY" 
+                                maxlength='5'
+                                name="month">
+                            </div>
+                            <div class="cvc">
+                                <input inputmode="numeric"  placeholder="CVC" maxlength="3"  type="tel" name="cvc">
+                            </div>
+                        </div>
+
+                        </div>
+                    
+                </div>
+                <div class="inputBox">
+                    <span>Name on card</span>
+                    <input type="text" placeholder="Card holder" name="NmaeOnCard" >
+                </div>
+
+              
+                <input type="submit" value="Pay" class="submit-btn">
+            </div>
+    
+        </div>
+
+        
+
+    </form>
+</div>
+ 
+</div>  
+</body>
+</html>
+{% endblock content%}

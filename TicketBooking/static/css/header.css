@@ -1,0 +1,43 @@
+
+
+.header {
+  padding: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  display: flex;
+}
+.headerTitle {
+  width: 20%;
+  background-color: white;
+  border-radius: 60px;
+  padding: 1%;
+  padding-bottom: 2%;
+}
+
+.headerTitle strong {
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.headerTitle p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+
+.featured{
+  display: grid;
+  grid-auto-rows: 1fr;
+  background-image: url("/static/image/Main/subBG.png");
+  margin-top: 2rem;
+  margin-inline : 2rem;
+  padding: 20px;
+  border-radius: 3rem;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  height: 90vh;
+}
+

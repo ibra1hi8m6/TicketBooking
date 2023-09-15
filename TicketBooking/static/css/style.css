@@ -1,0 +1,273 @@
+@import url(//db.onlinewebfonts.com/c/4626c20f1677e7629dade5bef0d1ebde?family=TTRoundsCondensedW10-Rg);
+
+@font-face {
+  font-family: "TTRoundsCondensedW10-Rg";
+  src: url("//db.onlinewebfonts.com/t/4626c20f1677e7629dade5bef0d1ebde.eot");
+  src: url("//db.onlinewebfonts.com/t/4626c20f1677e7629dade5bef0d1ebde.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/4626c20f1677e7629dade5bef0d1ebde.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/4626c20f1677e7629dade5bef0d1ebde.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/4626c20f1677e7629dade5bef0d1ebde.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/4626c20f1677e7629dade5bef0d1ebde.svg#TTRoundsCondensedW10-Rg") format("svg");
+}
+
+@font-face {
+  font-family: "compiler plain";
+  src: url("../fonts/compilerplain-black-fsp.otf");
+}
+
+body {
+  background-image: url("../image/Home/NFL.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+object {
+  pointer-events: none;
+}
+
+.main {
+  /* layout child elements vertically */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: flex;
+
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+
+
+/*TicketPage*/
+.Rectangle76 {
+  position: absolute;
+  width: 556px;
+  height: 765px;
+  left: 80px;
+  top: 109px;
+  background: #ffffff;
+  border-radius: 53px;
+}
+
+.Rectangle77 {
+  position: absolute;
+  width: 226px;
+  height: 63px;
+  left: 245px;
+  top: 33px;
+  background: #fffcfc;
+  border-radius: 16px;
+}
+
+.homeicon21 {
+  position: absolute;
+  width: 66px;
+  height: 69px;
+  left: 260px;
+  top: 30px;
+}
+
+.back {
+  position: absolute;
+  width: 60px;
+  height: 48px;
+  left: 394px;
+  top: 41px;
+}
+
+.JetsatBills {
+  position: absolute;
+  width: 485px;
+  height: 50px;
+  left: 107px;
+  top: 132px;
+  font-family: "Poppins";
+  font-style: "calibri (Body)";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.v1 {
+  position: absolute;
+  width: 251px;
+  height: 150px;
+  left: 107px;
+  top: 214px;
+  border-radius: 40px;
+}
+
+.V2 {
+  position: absolute;
+  width: 251px;
+  height: 150px;
+  left: 107px;
+  top: 378px;
+  border-radius: 40px;
+}
+
+.V3 {
+  position: absolute;
+  width: 251px;
+  height: 150px;
+  left: 107px;
+  top: 542px;
+  border-radius: 40px;
+}
+
+.V4 {
+  position: absolute;
+  width: 251px;
+  height: 150px;
+  left: 107px;
+  top: 706px;
+}
+
+.V5{
+  position: absolute;
+  width: 251px;
+  height: 150px;
+  left: 169px;
+  top: 703px;
+  border-radius: 40px;
+  }
+
+.moneyV1 {
+  position: absolute;
+  width: 125px;
+  height: 54px;
+  left: 375px;
+  top: 258px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.moneyV2 {
+  position: absolute;
+  width: 125px;
+  height: 54px;
+  left: 375px;
+  top: 420px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.moneyV3 {
+  position: absolute;
+  width: 125px;
+  height: 54px;
+  left: 375px;
+  top: 590px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.moneyV4 {
+  position: absolute;
+  width: 125px;
+  height: 54px;
+  left: 375px;
+  top: 748px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.buyV1 {
+  position: absolute;
+  width: 71px;
+  height: 50px;
+  left: 500px;
+  top: 269px;
+  border-radius: 25px;
+}
+
+.buyV2 {
+  position: absolute;
+  width: 71px;
+  height: 50px;
+  left: 500px;
+  top: 429px;
+  border-radius: 25px;
+}
+
+.buyV3 {
+  position: absolute;
+  width: 71px;
+  height: 50px;
+  left: 500px;
+  top: 600px;
+  border-radius: 25px;
+}
+
+.buyV4 {
+  position: absolute;
+  width: 71px;
+  height: 50px;
+  left: 500px;
+  top: 757px;
+  background: url(buy.png);
+  border-radius: 25px;
+}
+
+.overlaysignin {
+  position: absolute;
+  width: 700px;
+  height: 765px;
+  left: 696px;
+  top: 109px;
+  background: #ffffff;
+  border-radius: 24px;
+}
+
+.overlaysignin2{
+  position: absolute;
+  width: 700px;
+  height: 765px;
+  left: 720px;
+  top: 160px;
+  border-radius: 24px;
+ }
+
+ .RedSoxatYankeesSun{
+  position: absolute;
+  width: 485px;
+  height: 50px;
+  left: 107px;
+  top: 132px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+  }
+  
+  

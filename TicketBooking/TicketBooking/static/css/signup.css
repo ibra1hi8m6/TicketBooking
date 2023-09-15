@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+body {
+  background-image: url("../image/Home/NFL.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+.container form {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 500px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+}
+.container form .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.container form .saker {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  flex-wrap: nowrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.container form .saker .saker-left {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  flex-wrap: nowrap;
+  gap: 25px;
+  justify-content: center;
+  padding-left: 0px;
+}
+.container form .saker .saker-right {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  flex-wrap: nowrap;
+  gap: 25px;
+  justify-content: center;
+}
+.container form .row .col {
+  flex: 1 1 350px;
+}
+
+.container form .row .col .title {
+  font-size: 20px;
+  color: #333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox {
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+.container form .row .col .inputBox span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  border-radius: 12px;
+}
+
+.container form .row .col .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.container form .row .col .flex {
+  display: block;
+  gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+  margin-top: 5px;
+  border-radius: 12px;
+}
+
+.container form .row .col .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: gray;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.container form .submit-btn:hover {
+  background: gray;
+}
+.imagelog {
+  display: block;
+
+  flex-flow: column wrap;
+}
+.imagelog .imagelog-1 {
+  height: auto;
+  margin-right: 100px;
+  animation: fadeIn 3s;
+}
+.saker-left {
+  justify-content: flex-start;
+}
+.saker-right {
+  justify-content: flex-start;
+}
+
+.homeicon {
+  display: flex;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+.saker8 {
+  padding: 1px 100px !important;
+  font-size: 15px !important;
+  text-transform: none !important;
+  border-radius: 25px !important;
+}
+
+.slide-left {
+  animation: slide-left 1s linear forwards;
+  animation-timing-function: linear;
+}
+@keyframes slide-left {
+  0% {
+    transform: translate(100px);
+    opacity: 0;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+}
+
+.slide-in {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+  animation-timing-function: linear;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+    animation-timing-function: linear;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    animation-timing-function: linear;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.messages .p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.messages .info {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: red;
+
+}
+
+.messages1{
+  margin-top: 0px;
+  margin-left: -10px;
+  width:150%;
+  padding:12px;
+  font-size: 17px;
+  text-transform: none!important;
+  color:rgb(17, 99, 2);
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 12px;
+  
+}
+.messages2{
+  margin-top: 0px;
+  margin-left: -20px;
+  width:150%;
+  padding:12px;
+  font-size: 17px;
+  text-transform: none!important;
+  color: red;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 12px;
+  
+}
